@@ -1,5 +1,5 @@
 import { cn } from '@/app/component/cn';
-import { Children } from 'react';
+import { children } from 'react';
 
 export default function Card({ className, children, ...rest }) {
     return (

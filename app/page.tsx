@@ -1,9 +1,5 @@
-
-import type { Head } from "next";
-
+//import { Head } from "next";
 "use client";
-import Image from "next/image";
-
 import { useState, useEffect } from "react";
 import Navbar from "@/app/Navbar";
 import AOS from 'aos';
