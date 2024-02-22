@@ -1,10 +1,11 @@
 'use client '
 import {Head} from "next";
-import Navbar from '@/app/Navbar'
+import Navbar from "@/app/component/Navbar";
 import Input from '@/app/component/Input'
 import Form from '@/app/component/Form'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from "../component/Footer";
 export default function Contact() {
     return (
         <>
@@ -25,6 +26,7 @@ export default function Contact() {
                 <button type="submit" className="bg-[#55536A] w-fit self-center p-[1rem] rounded-md shadow-sm font-bold">Envoyer</button>
             </Form>
             </main>
+            <Footer />
         </>
     );
 }

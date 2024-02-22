@@ -1,9 +1,10 @@
 import {Head} from 'next'
-import Navbar from '@/app/Navbar'
+import Navbar from "@/app/component/Navbar";
 import Image from "next/image";
 import Card from '@/app/component/Card' 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from '../component/Footer';
 function Portfolio (){
     return(
        <>
@@ -36,6 +37,7 @@ function Portfolio (){
             </Card>
         </div>
        </main>
+       <Footer/>
        </>
     )
 }

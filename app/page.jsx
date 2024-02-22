@@ -1,11 +1,12 @@
 //import { Head } from "next";
 "use client";
 import { useState, useEffect } from "react";
-import Navbar from "@/app/Navbar";
+import Navbar from "@/app/component/Navbar";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import Card from "@/app/component/Card"
+import Footer from '@/app/component/Footer'
 function Page() {
     const [display, setDisplay] = useState(false);
 
@@ -71,6 +72,7 @@ function Page() {
             </div>
             </div>
             </main>
+            <Footer />
         </>
     );
 }
