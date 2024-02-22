@@ -1,3 +1,4 @@
+'use client '
 import {Head} from "next";
 import Navbar from '@/app/Navbar'
 import Input from '@/app/component/Input'
