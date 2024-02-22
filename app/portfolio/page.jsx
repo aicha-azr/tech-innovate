@@ -12,7 +12,7 @@ function Portfolio (){
        <meta name="portfolio" content="we present the project realised by tech innovate team." />
         <meta name="portfolio" content="next.js, react, metadata" />
        <main className="h-screen  w-screen flex items-center justify-center">
-        <div className="flex flex-wrap gap-[3rem] items-center justify-center items-stretch" data-aos="fade-up">
+        <div className="flex flex-wrap gap-[3rem]  justify-center items-stretch" data-aos="fade-up">
             <Card className="max-w-fit w-[30rem] items-stretch">
                 <Image src="https://th.bing.com/th/id/R.5ee6ac7cb746f88e0cd15d6aa88b1ee9?rik=I5P%2fYefBjp%2fSTQ&pid=ImgRaw&r=0" width="600" height="600"/>
                 <h4 className='text-1xl font-bold text-center'>Plateforme d'apprentissage en ligne personnalisée</h4>
