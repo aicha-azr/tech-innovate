@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tech Innovate Showcase
 
-## Getting Started
+Ce projet vise à développer un site vitrine pour présenter Tech Innovate et ses services. Il utilise Next.js, TypeScript, et TailwindCSS pour créer un site moderne et réactif.
+## Table des Matières
 
-First, run the development server:
+* [Installation de TailwindCSS](#installation-de-tailwindcss)
+* [Architecture du Projet](#architecture-du-projet)
+    - [Page d'accueil](#page-daccueil)
+    - [Services](#services)
+    - [Portfolio](#portfolio)
+    - [Équipe](#équipe)
+    - [Contact](#contact)
+* [Développement du Site Vitrine](#développement-du-site-vitrine)
+    - [Composants UI Réutilisables](#composants-ui-réutilisables)
+    - [Styling avec TailwindCSS](#styling-avec-tailwindcss)
+* [Optimisations](#optimisations)
+    - [SEO](#seo)
+    - [Performances](#performances)
+* [Déploiement](#déploiement)
+## Initialisation et Configuration du Projet
+
+### Création du Projet
+
+Pour initialiser le projet, utilisez la commande suivante :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app@latest tech-innovate --typescript  
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Installez également TailwindCSS pour le design et la mise en page :
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm install tailwindcss
+```
+### Architecture du Projet
+Le projet est organisé en pages et composants, suivant la convention de routage de Next.js.
 
-## Learn More
+- **Page d'accueil** (`pages/index.tsx`): IntroduitTech Innovate, ses valeurs et ses domaines d'expertise.
+- **Services** (`services/page.tsx`): 
+    - Détaille les services offerts.
+    - Inclut des fonctionnalités spécifiques pour chaque service.
+- **Portfolio** (`portfolio/page.tsx`): 
+    - Montre les projets réalisés ou produits développés.
+    - Inclut des images et des descriptions détaillées des projets.
+- **Équipe** (`team/page.tsx`): 
+    - Présente l'équipe derrière les innovations.
+    - Inclut des biographies courtes des membres de l'équipe.
+- **Contact** (`contact/page.tsx`): 
+    - Fournit un formulaire de contact et des coordonnées.
+    - Inclut des champs pour les noms, les adresses e-mail et les messages.
 
-To learn more about Next.js, take a look at the following resources:
+### Développement du Site Vitrine
+#### Composants UI Réutilisables
+Créez des composants pour des éléments UI répétitifs comme des boutons, cartes, et formulaires.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Styling avec TailwindCSS
+Utilisez TailwindCSS pour un design responsive et cohérent à travers le site.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Optimisations
+#### SEO
+Utilisez les fonctionnalités de Next.js pour améliorer le référencement et l'accessibilité du site.
 
-## Deploy on Vercel
+#### Performances
+Optimisez les images et analysez les performances du site pour améliorer les temps de chargement.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Déploiement
+Déployez le site sur des plateformes comme Vercel ou Netlify pour un déploiement continu et des previews automatiques.
