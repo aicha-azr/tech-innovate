@@ -10,6 +10,7 @@ import Service from "./services/page";
 import Portfolio from "./portfolio/page";
 import Contact from "./contact/page";
 import Section from '@/app/component/Section'
+import Team from "@/app/team/page"
 function Page() {
     const sectionRef = useRef(null);
 
@@ -57,6 +58,9 @@ function Page() {
                     </Section>
                     <Section id="portfolio" className="w-full">
                         <Portfolio />
+                    </Section>
+                    <Section id="equipe">
+                        <Team />
                     </Section>
                     <Section id="contact" className="w-full">
                         <Contact />
