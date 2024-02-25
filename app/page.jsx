@@ -37,7 +37,7 @@ function Page() {
                 <main className="flex flex-col  h-[100%] w-[100%] gap-[2rem] mt-10 p-[2rem] ">
                     <Section>
                         <div className="text-black flex flex-col md:flex-row items-center gap-10" data-aos="fade-right">
-                            <div className="md:w-1/2">
+                            <div className="flex flex-col gap-10  md:w-1/2">
                                 <h2 className="font-bold text-2xl">Bienvenue chez Tech Innovate,</h2>
                                 <p>
                                     Chez Tech Innovate, nous sommes passionnés par l'innovation technologique et nous nous engageons à fournir des solutions de pointe dans un large éventail de domaines. Fondée sur des valeurs solides, notre entreprise s'efforce de repousser les limites de la technologie pour façonner un avenir meilleur.
@@ -47,16 +47,11 @@ function Page() {
                                 <img src="https://i.pinimg.com/564x/d0/91/74/d09174f5ec009faf326f161c13a9e41e.jpg" className="h-auto" alt="Tech Innovate" />
                             </div>
                         </div>
-                        <Mouse size={50} color="black" onClick={()=>{ if (sectionRef.current) {
-            window.scrollTo({
-                top: sectionRef.current.offsetTop,
-                behavior: 'smooth'
-            });
-        }} }/>
+                        <Mouse size={50} color="black" onClick={()=>handleScrollToNextSection()}/>
                     </Section>
-                    <Section ref={sectionRef} className="w-full flex items-center justify-center mt-9">
+                    <div ref={sectionRef} className="w-full flex items-center justify-center">
                         <Value />
-                    </Section>
+                    </div>
                     <Section id="service" className="w-full">
                         <Service />
                     </Section>
