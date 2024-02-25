@@ -2,11 +2,11 @@ import Card from './Card'
 export default function Value(){
 
     return(<>
-     <div className="flex items-center justify-center flex-col text-black gap-20 absolute" data-aos="fade-left">
+     <div className="flex items-center justify-center flex-col text-black gap-20 h-fit" data-aos="fade-left">
                 <h2 className="text-3xl font-bold mt-2 text-center">Nos Valeurs :</h2>
                 <div className="flex gap-5 items-center justify-center">
                 
-                <div className="flex flex-wrap gap-[2rem] ">
+                <div className="flex  gap-[2rem] justify-center ">
                 <Card>
                 <h4 className='text-1xl font-bold'>Innovation</h4>
                 <p>

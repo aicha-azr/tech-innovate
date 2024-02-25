@@ -1,18 +1,17 @@
 "use client"
-// Importer les modules nécessaires
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "@/app/component/Navbar";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Mouse } from 'lucide-react';
-import Value from "./component/Value"
-import Footer from '@/app/component/Footer'
+import Value from "./component/Value";
+import Footer from '@/app/component/Footer';
 import Service from "./services/page";
 import Portfolio from "./portfolio/page";
 import Contact from "./contact/page";
-
+import Section from '@/app/component/Section'
 function Page() {
-    const [scroll, setScroll] = useState(false);
+    const sectionRef = useRef(null);
 
     useEffect(() => {
         AOS.init({
@@ -20,38 +19,56 @@ function Page() {
             easing: 'ease-in-out',
             once: true
         });
-    }, []);
+    });
+
+    const handleScrollToNextSection = () => {
+        if (sectionRef.current) {
+            window.scrollTo({
+                top: sectionRef.current.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
 
     return (
         <>
-            <Navbar />
-            <meta name="home" content="This is the home page of tech innovate where you can know about us and about our values." />
-            <meta name="home" content="next.js, react, metadata" />
-            <div className="flex items-center flex-col">
-                <div className="text-black flex flex-row items-center justify-around">
-                    <div className="w-max-fit w-[500px] flex flex-col gap-20 mt-10 ml-20 text-lg justify-center" data-aos="fade-right">
-                        <h2 className="font-bold text-[2rem]">Bienvenue chez Tech Innovate,</h2>
-                        <p>
-                            Chez Tech Innovate, nous sommes passionnés par l'innovation technologique et nous nous engageons à fournir des solutions de pointe dans un large éventail de domaines. Fondée sur des valeurs solides, notre entreprise s'efforce de repousser les limites de la technologie pour façonner un avenir meilleur.
-                        </p>
-                    </div>
-                    <img src="https://i.pinimg.com/564x/d0/91/74/d09174f5ec009faf326f161c13a9e41e.jpg" className="z-20 h-[28rem]" />
-                    <Mouse size={50} color="black" onClick={() => setScroll(true)} />
-                </div>
-                <div>
-                    <Value />
-                </div>
-                <section id="service">
-                    <Service />
-                </section>
-                <section id="portfolio">
-                    <Portfolio />
-                </section>
-                <section id="contact">
-                    <Contact />
-                </section>
+            <div className="flex flex-col justify-between items-center gap-[2rem]">
+                <Navbar />
+                <main className="flex flex-col  h-[100%] w-[100%] gap-[2rem] mt-10 p-[2rem] ">
+                    <Section>
+                        <div className="text-black flex flex-col md:flex-row items-center gap-10" data-aos="fade-right">
+                            <div className="md:w-1/2">
+                                <h2 className="font-bold text-2xl">Bienvenue chez Tech Innovate,</h2>
+                                <p>
+                                    Chez Tech Innovate, nous sommes passionnés par l'innovation technologique et nous nous engageons à fournir des solutions de pointe dans un large éventail de domaines. Fondée sur des valeurs solides, notre entreprise s'efforce de repousser les limites de la technologie pour façonner un avenir meilleur.
+                                </p>
+                            </div>
+                            <div className="md:w-1/2">
+                                <img src="https://i.pinimg.com/564x/d0/91/74/d09174f5ec009faf326f161c13a9e41e.jpg" className="h-auto" alt="Tech Innovate" />
+                            </div>
+                        </div>
+                        <Mouse size={50} color="black" onClick={()=>{ if (sectionRef.current) {
+            window.scrollTo({
+                top: sectionRef.current.offsetTop,
+                behavior: 'smooth'
+            });
+        }} }/>
+                    </Section>
+                    <Section ref={sectionRef} className="w-full flex items-center justify-center mt-9">
+                        <Value />
+                    </Section>
+                    <Section id="service" className="w-full">
+                        <Service />
+                    </Section>
+                    <Section id="portfolio" className="w-full">
+                        <Portfolio />
+                    </Section>
+                    <Section id="contact" className="w-full">
+                        <Contact />
+                    </Section>
+                </main>
+               <Footer />
             </div>
-            <Footer />
         </>
     );
 }

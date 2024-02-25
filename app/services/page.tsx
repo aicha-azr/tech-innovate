@@ -10,11 +10,12 @@ const Service:NextPage=()=> {
     return (
         <>
 
-           <div className="flex flex-col">
+           <div className="flex flex-col h-fit">
             <Navbar />
             <meta name="services" content="we present our services of our team tech innovate." />
         <meta name="services" content="next.js, react, metadata" />
-                <div className="flex  items-center justify-center text-black pt-[2rem] h-screen">
+                <div className="flex flex-col w-fit items-center justify-center text-black pt-[2rem] ">
+                    <h4 className="text-center text-3xl mb-10 text-black font-bold">Nos services:</h4>
                         <div className="flex justify-around flex-wrape gap-[2rem] items-center " data-aos="fade-up">
                         <Card className="p-[3rem] w-[30rem] w-max-fit stretch h-[20rem] h-content-fit">
                             <Cpu size={70} />

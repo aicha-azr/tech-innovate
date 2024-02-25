@@ -12,16 +12,16 @@ function Portfolio (){
        
        <meta name="portfolio" content="we present the project realised by tech innovate team." />
         <meta name="portfolio" content="next.js, react, metadata" />
-       <div className="h-screen  w-screen flex items-center justify-center">
-        <div className="flex flex-wrap gap-[3rem]  justify-center items-stretch" data-aos="fade-up">
-            <Card className="max-w-fit w-[30rem] items-stretch">
+       <h4 className='text-black font-bold text-3xl mb-10'>Notre Portfolio</h4>
+        <div className="flex  flex-row  gap-[3rem]  justify-center" data-aos="fade-up">
+            <Card >
                 <Image src="https://th.bing.com/th/id/R.5ee6ac7cb746f88e0cd15d6aa88b1ee9?rik=I5P%2fYefBjp%2fSTQ&pid=ImgRaw&r=0" width="600" height="600"/>
                 <h4 className='text-1xl font-bold text-center'>Plateforme d'apprentissage en ligne personnalisée</h4>
                 <p>
                 Développer une plateforme d'apprentissage en ligne qui utilise l'intelligence artificielle pour recommander du contenu personnalisé aux utilisateurs en fonction de leurs préférences d'apprentissage, de leurs compétences et de leurs objectifs.</p> 
             </Card>
 
-            <Card className="items-stretch" >
+            <Card>
             <Image src="https://th.bing.com/th/id/OIP.hb12-YaDfzy4GvHcMHJFiQHaDt?w=346&h=174&c=7&r=0&o=5&pid=1.7" width="600" height="600"/>
                 <h4 className="text-1xl font-bold text-center">Application de santé et bien-être</h4>
                 <p>
@@ -36,7 +36,7 @@ function Portfolio (){
                 </p> 
             </Card>
         </div>
-       </div>
+       
        
        </>
     )

@@ -26,7 +26,7 @@ export default function Contact() {
                 <Input type="email" id="email" name="email" required/>
                 <label htmlFor="description" className="font-bold">Description :</label>
                 <textarea id="description" name="description" className="bg-[#e2e3e7] p-3 rounded-sm shadow-md max-h-15" />
-                <button type="submit" className="bg-[#55536A] w-fit self-center p-[1%] rounded-md shadow-sm font-bold">Envoyer</button>
+                <button type="submit" className="bg-[#50B66A] w-fit self-center p-[3%] rounded-md shadow-sm font-bold text-white">Envoyer</button>
             </Form>
             </div>
             
