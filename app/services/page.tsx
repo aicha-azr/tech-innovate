@@ -14,7 +14,7 @@ const Service:NextPage=()=> {
             <Navbar />
             <meta name="services" content="we present our services of our team tech innovate." />
         <meta name="services" content="next.js, react, metadata" />
-                <main className="flex  items-center justify-center text-black pt-[2rem] h-screen">
+                <div className="flex  items-center justify-center text-black pt-[2rem] h-screen">
                         <div className="flex justify-around flex-wrape gap-[2rem] items-center " data-aos="fade-up">
                         <Card className="p-[3rem] w-[30rem] w-max-fit stretch h-[20rem] h-content-fit">
                             <Cpu size={70} />
@@ -37,8 +37,8 @@ const Service:NextPage=()=> {
                             <p>Développer des solutions basées sur l'intelligence artificielle et le machine learning pour automatiser des tâches, améliorer les processus et anticiper les tendances du marché.</p>
                         </Card>
                         </div>
-                   </main> 
-                <Footer />
+                   </div> 
+              
 
                 </div>
         </>

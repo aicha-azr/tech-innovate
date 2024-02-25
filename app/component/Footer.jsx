@@ -3,7 +3,7 @@ import Link from 'next/link';
 const  Footer = ()=>{
     return(
         <>
-            <div className="bg-[#C9C9C9] absolute bottom-0 h-5 flex p-[5rem] justify-around  w-full text-[15] shadow-lg text-black items-center">
+            <div className="bg-[#f3f4f6] bottom-0 h-3 flex p-[5%] justify-around  w-full text-[15] shadow-lg text-black items-center">
                 <div className='flex gap-[3rem]'>
                     <h5 className='font-bold'>liens de navigations :</h5>
                     <ol className="custom-list list-disc">
